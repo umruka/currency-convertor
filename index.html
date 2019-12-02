@@ -9,7 +9,8 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Landing Page - Start Bootstrap Theme</title>
+    <title>Currency Converter</title>
+    <link href="https://www.iconhot.com/icon/png/siena/256/currency-dollar-red.png" rel="icon" type="image/x-icon" />
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -35,8 +36,12 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Online Currency Convertor</a>
-        <a class="nav-item" href="#">About us</a>
+        <a class="navbar-brand" href="index.html">Online Currency Converter</a>
+        <div>
+          <a href="index.html" style="color: #000; margin: 5px;">Home</a>
+          <a href="blog.html" style="color: #000; margin: 5px;">Blog</a>
+          <a href="about-us.html" style="color: #000; margin: 5px;">About us</a>
+        </div>
       </div>
     </nav>
 
@@ -45,119 +50,75 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
-          <div class="col-2 mx-auto">
+          <div class="col-8 mx-auto" style="max-width: 100%; flex: none;">
+            <h1>Convert your money easily</h1>
+            <br><br><br>
+            
             <form class="form-vertical text-lg-left">
-              <div class="form-group">
-                <label for="exampleInputSum">Amount</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputSum"
-                  aria-describedby="inputSumHelp"
-                  placeholder="Enter Sum"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="exampleFrom">From</label>
-                <div class="dropdown">
-                  <button
-                    class="btn btn-light dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >From</button>
-                  <div
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton"
-                  >
-                    <a class="dropdown-item" href="#">BGN</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">BGN</a>
-                    <a class="dropdown-item" href="#">USD</a>
-                    <a class="dropdown-item" href="#">EURO</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="examleTo">To</label>
-                <div class="form-group">
-                  <div class="dropdown">
-                    <button
+              <div class="input-group">
+                  <span class="input-group-btn">
+                      <button 
                       class="btn btn-light dropdown-toggle"
                       type="button"
-                      id="dropdownMenuButton"
+                      id="dropdownMenuButtonFrom"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
-                    >To</button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="#">BGN</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">BGN</a>
-                      <a class="dropdown-item" href="#">USD</a>
-                      <a class="dropdown-item" href="#">EURO</a>
+                      style="margin-right: 20px; width: 200px;"
+                      >From</button>
+                      <div
+                      id="fromDropdown"
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                    style="max-height: 200px;overflow: auto;">
                     </div>
+                  </span>
+
+                  <img src="http://www.pngonly.com/wp-content/uploads/2018/11/arrow-transparent-picture2.png" style="width: 150px; height: 50px;margin-right: 20px;margin-top: -7px;">
+
+                  <input
+                  type="text"
+                  class="form-control width100"
+                  id="inputSum"
+                  aria-describedby="inputSumHelp"
+                  value="1"
+                  style="margin-right: 20px"
+                />
+
+                <img src="http://www.pngonly.com/wp-content/uploads/2018/11/arrow-transparent-picture2.png" style="width: 150px; height: 50px;margin-right: 20px;margin-top: -7px;">
+
+                <span class="input-group-btn">
+                    <button 
+                    class="btn btn-light dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButtonTo"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    style="width: 200px;"
+                    >To</button>
+                    
+                    <div
+                    id="toDropdown"
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton"
+                  style="max-height: 200px;overflow: auto;">
                   </div>
-                </div>
+                </span>
               </div>
-              <div class="form-group text-center">
-                <button type="button" class="btn btn-primary">Primary</button>
+              
               </div>
             </form>
+            <div id="resultDiv" style="border: 2px solid #1dacfb;font-size: 30px; width: 500px; margin: 30px auto;font-weight: bold;color: #fff; background-color: rgba(0, 0, 0, 0.7); padding: 20px;">0</div>
           </div>
-          <div class="col-2 mx-auto">
-            <div class="form-group">
-              <button type="button" class="btn btn-primary">Primary</button>
-            </div>
-          </div>
-          <div class="col-2 mx-auto">
-            <div class="form-group">
-              <button type="button" class="btn btn-primary">Primary</button>
-            </div>
-          </div>
+          
         </div>
       </div>
     </header>
     <section>
       <div class="row">
-        <div class="col-2 mx-auto">
-        <table class="table-light table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <div id="chart_div" style="width:auto; min-width: 50%;height:400px;margin: 0 auto;margin-top: -100px;"></div>
+        
       </div>
     </div>
     </section>
@@ -172,7 +133,7 @@
               </div>
               <h3>Fast Convert</h3>
               <p class="lead mb-0">
-                This online convertor will look convert your money, ASAP!
+                This online convertor will convert your money in a blick of an eye!
               </p>
             </div>
           </div>
@@ -194,13 +155,23 @@
               </div>
               <h3>Easy to Use</h3>
               <p class="lead mb-0">
-                Pick a Amount and Get to go!
+                Pick an amount and get to go!
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+<!-- 
+    <section class="features-icons bg-light text-center">
+        <div class="container">
+          <div class="row">
+              <div id="googleMap" style="width:100%;height:400px;"></div>
+
+          </div>
+        </div>
+      </section> -->
 
     <!-- Testimonials -->
     <section class="testimonials text-center bg-light">
@@ -214,7 +185,7 @@
                 src="img/testimonials-1.jpg"
                 alt=""
               />
-              <h5>Dinko D.</h5>
+              <h5>Elitsa V.</h5>
               <p class="font-weight-light mb-0">
                 "This is fantastic! Thanks so much guys!"
               </p>
@@ -227,10 +198,9 @@
                 src="img/testimonials-2.jpg"
                 alt=""
               />
-              <h5>Elica V.</h5>
+              <h5>Sinan S.</h5>
               <p class="font-weight-light mb-0">
-                "Bootstrap is amazing. I've been using it to create lots of
-                super nice landing pages."
+                "An excellent experience!"
               </p>
             </div>
           </div>
@@ -241,10 +211,9 @@
                 src="img/testimonials-3.jpg"
                 alt=""
               />
-              <h5>Sinan S.</h5>
+              <h5>Dinko D.</h5>
               <p class="font-weight-light mb-0">
-                "Thanks so much for making these free resources available to
-                us!"
+                "Very good and fast!"
               </p>
             </div>
           </div>
@@ -258,7 +227,7 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
-            <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+            <h2 class="mb-4">Want to get rate updates? Sign up now!</h2>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
             <form>
@@ -292,19 +261,15 @@
           <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
             <ul class="list-inline mb-2">
               <li class="list-inline-item">
-                <a href="#">About</a>
+                <a href="index.html">Home</a>
               </li>
               <li class="list-inline-item">&sdot;</li>
               <li class="list-inline-item">
-                <a href="#">Contact</a>
+                <a href="blog.html">Blog</a>
               </li>
               <li class="list-inline-item">&sdot;</li>
               <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
+                <a href="about-us.html">About us</a>
               </li>
             </ul>
             <p class="text-muted small mb-4 mb-lg-0">
@@ -337,5 +302,151 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	  <script>
+		  
+		  google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBasic);
+
+    function drawBasic() {
+
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+
+      today = `${yyyy}-${mm}-${dd}`;
+
+      var oneWeekAgo = new Date();
+      oneWeekAgo.setDate((new Date()).getDate() - 10);
+
+      dd = String(oneWeekAgo.getDate()).padStart(2, '0');
+      mm = String(oneWeekAgo.getMonth() + 1).padStart(2, '0'); //January is 0!
+      yyyy = oneWeekAgo.getFullYear();
+
+      oneWeekAgo = `${yyyy}-${mm}-${dd}`;
+
+      fetch(`https://api.exchangeratesapi.io/history?start_at=${oneWeekAgo}&end_at=${today}&symbols=${fromCurrency},${toCurrency}&base=${fromCurrency}`)
+          .then(response => response.json())
+          .then(response => {
+              var rates = response.rates;
+              var keys = Object.keys(rates);
+              keys = keys.sort();
+
+              var history = keys.map(key => {
+                return [key, rates[key][toCurrency]];
+              })
+
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'Time');
+              data.addColumn('number', 'Rate');
+
+              data.addRows(history);
+
+              var options = {
+                hAxis: {
+                  title: 'Time'
+                },
+                vAxis: {
+                  title: 'Rate'
+                }
+              };
+
+              var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+              chart.draw(data, options);
+          });
+    }
+    </script>
+    
+    <script>
+      var currencies = [];
+      var fromCurrency = false;
+      var toCurrency = false;
+
+      fetch('https://api.exchangeratesapi.io/latest')
+      .then(response => response.json())
+      .then(response => {
+        currencies = Object.keys(response.rates);
+        currencies = currencies.sort();
+
+        var list = currencies.map(currency => {
+          return "<a class='dropdown-item' onClick='fromClick(\"" + currency + "\")'>" + currency + "</a>"
+        });
+
+        $('#fromDropdown').html(list.join(' '));
+        fromClick(currencies[0]);
+
+        list = currencies.map(currency => {
+          return "<a class='dropdown-item' onClick='toClick(\"" + currency + "\")'>" + currency + "</a>"
+        });
+        $('#toDropdown').html(list.join(' '));
+        toClick(currencies[1]);
+      });
+
+      function fromClick(currency) {
+        fromCurrency = currency;
+        $('#dropdownMenuButtonFrom').text(currency);
+
+        if(toCurrency) {
+          calc();
+          drawBasic();
+        }
+      }
+
+      function toClick(currency) {
+        toCurrency = currency;
+        $('#dropdownMenuButtonTo').text(currency);
+
+        if(fromCurrency) {
+          calc();
+          drawBasic();
+        }
+      }
+
+      function calc() {
+        if(!fromCurrency || !toCurrency) {
+          return;
+        }
+
+        fetch(`https://api.exchangeratesapi.io/latest?symbols=${fromCurrency},${toCurrency}&base=${fromCurrency}`)
+          .then(response => response.json())
+          .then(response => {
+              var rate = response.rates[toCurrency];
+              var amount = parseFloat($('#inputSum').val());
+              var result = parseFloat(rate) * amount;
+              $('#resultDiv').html(amount + " " + fromCurrency + " = " + Math.round(result * 100) / 100 + " " + toCurrency);
+          });
+      }
+
+      $('#inputSum').on('input', () => {
+        calc();
+      });
+
+    </script>
+
+
+<script>
+    function myMap() {
+    var mapProp= {
+      center:new google.maps.LatLng(43.2141,27.9147),
+      zoom: 13,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+
+    fetch('https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyChSqCKyX4pWUZ5ew1TB8_aIu6RLJtQYyc&sensor=false&location=43.2141,27.9147&radius=47022&keyword=%22change%22',{
+      mode: 'no-cors'
+    })
+    .then(res => res.json())
+    .then(res => {
+      console.log(123);
+      console.log(res);
+    });
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChSqCKyX4pWUZ5ew1TB8_aIu6RLJtQYyc&callback=myMap"></script>
+    
   </body>
 </html>

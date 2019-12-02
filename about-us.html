@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Currency Converter | About Us</title>
+    <link href="https://www.iconhot.com/icon/png/siena/256/currency-dollar-red.png" rel="icon" type="image/x-icon" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Online Currency Converter</a>
+        <div>
+          <a href="index.html" style="color: #000; margin: 5px;">Home</a>
+          <a href="blog.html" style="color: #000; margin: 5px;">Blog</a>
+          <a href="about-us.html" style="color: #000; margin: 5px;">About us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    
+    <main role="main">
+
+        <section class="jumbotron text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">About us</h1>
+          </div>
+        </section>
+  
+        <div class="album py-5 bg-light">
+          <div class="container">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="about-us.html">About us</a></li>
+                  </ol>
+              </nav>
+
+
+      <div class="row" style="margin: 50px;text-align: justify;">
+          <div style="width: 300px; margin: 0 auto;">
+              We give you the power of our most up to date, reputable currency information and offer you secure, reliable, easy to use products and services dedicated to making your life easier.
+            </div>
+          </div>
+
+  
+            <div class="row">
+              <div class="col-md-12">
+                  <form>
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Name</label>
+                          <input class="form-control" type="text">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                      <button type="button" class="btn btn-primary" style="float:right;">Send message</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </main>
+
+        <!-- Footer -->
+        <footer class="footer bg-light">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                  <ul class="list-inline mb-2">
+                    <li class="list-inline-item">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li class="list-inline-item">&sdot;</li>
+                    <li class="list-inline-item">
+                      <a href="blog.html">Blog</a>
+                    </li>
+                    <li class="list-inline-item">&sdot;</li>
+                    <li class="list-inline-item">
+                      <a href="about-us.html">About us</a>
+                    </li>
+                  </ul>
+                  <p class="text-muted small mb-4 mb-lg-0">
+                    &copy; Online Currency Convertor 2019. All Rights Reserved.
+                  </p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                  <ul class="list-inline mb-0">
+                    <li class="list-inline-item mr-3">
+                      <a href="#">
+                        <i class="fab fa-facebook fa-2x fa-fw"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item mr-3">
+                      <a href="#">
+                        <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#">
+                        <i class="fab fa-instagram fa-2x fa-fw"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	  <script>
+		  
+		  google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBasic);
+
+    function drawBasic() {
+
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+      var yyyy = today.getFullYear();
+
+      today = `${yyyy}-${mm}-${dd}`;
+
+      var oneWeekAgo = new Date();
+      oneWeekAgo.setDate((new Date()).getDate() - 30);
+
+      dd = String(oneWeekAgo.getDate()).padStart(2, '0');
+      mm = String(oneWeekAgo.getMonth() + 1).padStart(2, '0'); //January is 0!
+      yyyy = oneWeekAgo.getFullYear();
+
+      oneWeekAgo = `${yyyy}-${mm}-${dd}`;
+
+      fetch(`https://api.exchangeratesapi.io/history?start_at=${oneWeekAgo}&end_at=${today}&symbols=${fromCurrency},${toCurrency}&base=${fromCurrency}`)
+          .then(response => response.json())
+          .then(response => {
+              var rates = response.rates;
+              var keys = Object.keys(rates);
+              keys = keys.sort();
+
+              var history = keys.map(key => {
+                return [key, rates[key][toCurrency]];
+              })
+
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'Time');
+              data.addColumn('number', 'Rate');
+
+              data.addRows(history);
+
+              var options = {
+                hAxis: {
+                  title: 'Time'
+                },
+                vAxis: {
+                  title: 'Rate'
+                }
+              };
+
+              var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+              chart.draw(data, options);
+          });
+    }
+    </script>
+    
+    <script>
+      var currencies = [];
+      var fromCurrency = false;
+      var toCurrency = false;
+
+      fetch('https://api.exchangeratesapi.io/latest')
+      .then(response => response.json())
+      .then(response => {
+        currencies = Object.keys(response.rates);
+        currencies = currencies.sort();
+
+        var list = currencies.map(currency => {
+          return "<a class='dropdown-item' onClick='fromClick(\"" + currency + "\")'>" + currency + "</a>"
+        });
+
+        $('#fromDropdown').html(list.join(' '));
+        fromClick(currencies[0]);
+
+        list = currencies.map(currency => {
+          return "<a class='dropdown-item' onClick='toClick(\"" + currency + "\")'>" + currency + "</a>"
+        });
+        $('#toDropdown').html(list.join(' '));
+        toClick(currencies[1]);
+      });
+
+      function fromClick(currency) {
+        fromCurrency = currency;
+        $('#dropdownMenuButtonFrom').text(currency);
+
+        if(toCurrency) {
+          calc();
+          drawBasic();
+        }
+      }
+
+      function toClick(currency) {
+        toCurrency = currency;
+        $('#dropdownMenuButtonTo').text(currency);
+
+        if(fromCurrency) {
+          calc();
+          drawBasic();
+        }
+      }
+
+      function calc() {
+        if(!fromCurrency || !toCurrency) {
+          return;
+        }
+
+        fetch(`https://api.exchangeratesapi.io/latest?symbols=${fromCurrency},${toCurrency}&base=${fromCurrency}`)
+          .then(response => response.json())
+          .then(response => {
+              var rate = response.rates[toCurrency];
+              var amount = parseFloat($('#inputSum').val());
+              var result = parseFloat(rate) * amount;
+              $('#resultDiv').html(result);
+          });
+      }
+
+      $('#inputSum').on('input', () => {
+        calc();
+      });
+
+    </script>
+  </body>
+</html>
